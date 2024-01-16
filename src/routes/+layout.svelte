@@ -3,5 +3,9 @@
 	import '../app.pcss';
 </script>
 
-<Navbar />
-<slot />
+<div class="flex h-full flex-col">
+	<Navbar />
+	<span class="flex-grow">
+		<slot />
+	</span>
+</div>
