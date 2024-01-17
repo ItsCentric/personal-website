@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
+	import ProjectCard from '$lib/components/ProjectCard.svelte';
 </script>
 
 <main class="h-full">
@@ -36,6 +37,28 @@
 			<img src="images/react-logo.png" alt="react logo" class="h-16 w-16" />
 			<img src="images/svelte-logo.png" alt="svelte logo" class="h-16 w-16" />
 			<img src="images/nextjs-logo.png" alt="nextjs logo" class="h-16 w-16" />
+		</div>
+	</section>
+	<section class="flex flex-col items-center justify-center px-48 py-24">
+		<div class="text-center">
+			<h3 class="mb-2 text-4xl font-bold">Projects</h3>
+			<p class="text-xl text-slate-500">Here are some of my projects.</p>
+		</div>
+		<div class="flex justify-center gap-4">
+			<ProjectCard
+				projectName="Music Wizard"
+				projectImage="images/music-wizard-preview.png"
+				projectLink="https://musicwizard.vercel.app"
+				>Music Wizard is a web application built on Next.js that allows users to track their Spotify
+				listening habits.</ProjectCard
+			>
+			<ProjectCard
+				projectName="Lyric Thing"
+				projectImage="images/javascript-logo.png"
+				projectLink=""
+				>Lyric Thing is a web application built on SvelteKit that allows users to read real-time
+				lyrics transcribed by AI for their current playing song on Spotify.</ProjectCard
+			>
 		</div>
 	</section>
 </main>
