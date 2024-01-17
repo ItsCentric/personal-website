@@ -1,11 +1,5 @@
 <script lang="ts">
-	import SkillsCard from '$lib/components/SkillsCard.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import CarouselContent from '$lib/components/ui/carousel/carousel-content.svelte';
-	import CarouselItem from '$lib/components/ui/carousel/carousel-item.svelte';
-	import CarouselNext from '$lib/components/ui/carousel/carousel-next.svelte';
-	import CarouselPrevious from '$lib/components/ui/carousel/carousel-previous.svelte';
-	import Carousel from '$lib/components/ui/carousel/carousel.svelte';
 </script>
 
 <main class="h-full">
@@ -21,32 +15,27 @@
 			<Button href="#contact">Let's Connect</Button>
 		</div>
 	</section>
-	<section class="flex bg-slate-200 py-16">
+	<section class="flex gap-16 bg-slate-200 px-48 py-24">
 		<div class="container">
 			<p class="text-sm text-slate-600">Skills</p>
-			<h3 class="text-5xl font-bold">Technical Skills</h3>
-			<p class="text-2xl text-slate-500">
-				I boast extensive experience in multiple skills. Click the arrows to find out more about
-				each one!
+			<h3 class="my-2 text-5xl font-bold">Technical Skills</h3>
+			<p class="mb-4 text-2xl text-slate-500">
+				I boast extensive experience in multiple skills, including but not limited to:
+				JavaScript/TypeScript, Go, Svelte, and more.
 			</p>
+			<Button href="static/resume.pdf" download="Isaiah_Stockton_Resume.pdf">
+				Download Resume
+			</Button>
 		</div>
-		<div class="container">
-			<Carousel class="mx-auto max-w-xl">
-				<CarouselContent>
-					<CarouselItem>
-						<SkillsCard skill="JavaScript" experience="2 years">
-							I have been using JavaScript for 2 years, and have used it in many different ways. I
-							have used it to create websites, desktop applications, and even Discord bots. I am
-							always learning more about it.
-						</SkillsCard>
-					</CarouselItem>
-					<CarouselItem>
-						<SkillsCard skill="Go" experience="3 months">aksdkajskfjakfjskajfkj</SkillsCard>
-					</CarouselItem>
-				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
-			</Carousel>
+		<div
+			class="container grid grid-cols-3 place-items-center gap-y-4 rounded-lg bg-white py-8 shadow"
+		>
+			<img src="images/javascript-logo.png" alt="javascript logo" class="h-16 w-16" />
+			<img src="images/typescript-logo.png" alt="typescript logo" class="h-16 w-16" />
+			<img src="images/go-logo.png" alt="go logo" class="h-16 w-16" />
+			<img src="images/react-logo.png" alt="react logo" class="h-16 w-16" />
+			<img src="images/svelte-logo.png" alt="svelte logo" class="h-16 w-16" />
+			<img src="images/nextjs-logo.png" alt="nextjs logo" class="h-16 w-16" />
 		</div>
 	</section>
 </main>
