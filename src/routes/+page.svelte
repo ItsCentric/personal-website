@@ -1,8 +1,6 @@
 <script lang="ts">
+	import SkillsCard from '$lib/components/SkillsCard.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import { Card, CardContent, CardHeader } from '$lib/components/ui/card';
-	import CardDescription from '$lib/components/ui/card/card-description.svelte';
-	import CardTitle from '$lib/components/ui/card/card-title.svelte';
 	import CarouselContent from '$lib/components/ui/carousel/carousel-content.svelte';
 	import CarouselItem from '$lib/components/ui/carousel/carousel-item.svelte';
 	import CarouselNext from '$lib/components/ui/carousel/carousel-next.svelte';
@@ -33,18 +31,17 @@
 			</p>
 		</div>
 		<div class="container">
-			<Carousel>
+			<Carousel class="mx-auto max-w-xl">
 				<CarouselContent>
 					<CarouselItem>
-						<Card>
-							<CardHeader>
-								<CardTitle>JavaScript</CardTitle>
-								<CardDescription>blah blah blah blah</CardDescription>
-							</CardHeader>
-							<CardContent>
-								<p>blah blah blah blah</p>
-							</CardContent>
-						</Card>
+						<SkillsCard skill="JavaScript" experience="2 years">
+							I have been using JavaScript for 2 years, and have used it in many different ways. I
+							have used it to create websites, desktop applications, and even Discord bots. I am
+							always learning more about it.
+						</SkillsCard>
+					</CarouselItem>
+					<CarouselItem>
+						<SkillsCard skill="Go" experience="3 months">aksdkajskfjakfjskajfkj</SkillsCard>
 					</CarouselItem>
 				</CarouselContent>
 				<CarouselPrevious />
