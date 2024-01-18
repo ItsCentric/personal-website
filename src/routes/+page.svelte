@@ -40,22 +40,26 @@
 		</div>
 	</section>
 	<section class="flex flex-col items-center justify-center px-48 py-24">
-		<div class="text-center">
-			<h3 class="mb-2 text-4xl font-bold">Projects</h3>
-			<p class="text-xl text-slate-500">Here are some of my projects.</p>
+		<div class="mb-8 text-center">
+			<h3 class="mb-2 text-4xl font-bold">My Projects</h3>
+			<p class="text-xl text-slate-500">
+				My blood, sweat, and tears. My "pride and joy"s. Here they are, in all of their glory.
+			</p>
 		</div>
-		<div class="flex justify-center gap-4">
+		<div class="flex justify-center gap-8">
 			<ProjectCard
 				projectName="Music Wizard"
 				projectImage="images/music-wizard-preview.png"
-				projectLink="https://musicwizard.vercel.app"
+				projectWebsite="https://musicwizard.vercel.app"
+				projectGithub="https://github.com/ItsCentric/music-wizard-website"
 				>Music Wizard is a web application built on Next.js that allows users to track their Spotify
 				listening habits.</ProjectCard
 			>
 			<ProjectCard
 				projectName="Lyric Thing"
-				projectImage="images/javascript-logo.png"
-				projectLink=""
+				projectImage="images/lyric-thing-preview.png"
+				projectWebsite=""
+				projectGithub="https://github.com/ItsCentric/lyric-thing"
 				>Lyric Thing is a web application built on SvelteKit that allows users to read real-time
 				lyrics transcribed by AI for their current playing song on Spotify.</ProjectCard
 			>
