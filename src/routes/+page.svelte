@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import MediaCard from '$lib/components/MediaCard.svelte';
 </script>
 
 <main class="h-full">
@@ -47,22 +47,75 @@
 			</p>
 		</div>
 		<div class="flex justify-center gap-8">
-			<ProjectCard
-				projectName="Music Wizard"
-				projectImage="images/music-wizard-preview.png"
-				projectWebsite="https://musicwizard.vercel.app"
-				projectGithub="https://github.com/ItsCentric/music-wizard-website"
-				>Music Wizard is a web application built on Next.js that allows users to track their Spotify
-				listening habits.</ProjectCard
+			<MediaCard
+				title="Music Wizard"
+				image="images/music-wizard-preview.png"
+				website="https://musicwizard.vercel.app"
 			>
-			<ProjectCard
-				projectName="Lyric Thing"
-				projectImage="images/lyric-thing-preview.png"
-				projectWebsite=""
-				projectGithub="https://github.com/ItsCentric/lyric-thing"
-				>Lyric Thing is a web application built on SvelteKit that allows users to read real-time
-				lyrics transcribed by AI for their current playing song on Spotify.</ProjectCard
+				<svelte:fragment slot="description">
+					Music Wizard is a web application built on Next.js that allows users to track their
+					Spotify listening habits.
+				</svelte:fragment>
+				<svelte:fragment slot="external-links">
+					<a
+						href="https://github.com/ItsCentric/lyric-thing"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="images/github-logo.svg" alt="github logo" class="h-6 w-6" />
+					</a>
+				</svelte:fragment>
+			</MediaCard>
+			<MediaCard title="Lyric Thing" image="images/lyric-thing-preview.png" website="">
+				<svelte:fragment slot="description">
+					Lyric Thing is a web application built on SvelteKit that allows users to read real-time
+					lyrics transcribed by AI for their current playing song on Spotify.
+				</svelte:fragment>
+				<svelte:fragment slot="external-links">
+					<a
+						href="https://github.com/ItsCentric/lyric-thing"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img src="images/github-logo.svg" alt="github logo" class="h-6 w-6" />
+					</a>
+				</svelte:fragment>
+			</MediaCard>
+		</div>
+	</section>
+	<section class="flex flex-col items-center justify-center bg-slate-200 px-48 py-24">
+		<div class="mb-8 text-center">
+			<h3 class="mb-2 text-4xl font-bold">Blog Posts</h3>
+			<p class="text-xl text-slate-500">I write about stuff. Check it out.</p>
+		</div>
+		<div class="flex justify-center gap-8">
+			<MediaCard
+				title="Coming soon..."
+				image="https://placehold.co/1920x1080/121212/e6e6e6?text=Coming+soon..."
+				website=""
 			>
+				<svelte:fragment slot="description">
+					I'm currently working on a blog, so stay tuned!
+				</svelte:fragment>
+			</MediaCard>
+			<MediaCard
+				title="Coming soon..."
+				image="https://placehold.co/1920x1080/121212/e6e6e6?text=Coming+soon..."
+				website=""
+			>
+				<svelte:fragment slot="description">
+					I'm currently working on a blog, so stay tuned!
+				</svelte:fragment>
+			</MediaCard>
+			<MediaCard
+				title="Coming soon..."
+				image="https://placehold.co/1920x1080/121212/e6e6e6?text=Coming+soon..."
+				website=""
+			>
+				<svelte:fragment slot="description">
+					I'm currently working on a blog, so stay tuned!
+				</svelte:fragment>
+			</MediaCard>
 		</div>
 	</section>
 </main>
