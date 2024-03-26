@@ -6,23 +6,23 @@
 </script>
 
 <main>
-	<section class="grid h-screen grid-cols-[33%,_1fr]">
+	<section class="grid-cols-[33%,_1fr] pt-[69px] lg:grid lg:h-screen lg:pt-0">
 		<div class="flex h-full flex-col">
-			<div class="flex flex-grow flex-col justify-center pl-20">
-				<div class="mb-4">
-					<h1 class="mb-2 font-heading text-7xl font-bold">Hey, I'm Isaiah Stockton</h1>
-					<p class="text-2xl text-muted">Making the world a better place, one line at a time.</p>
+			<div class="flex flex-grow flex-col justify-center px-8 py-16 lg:pl-20">
+				<div class="mb-4 text-center lg:text-left">
+					<h1 class="mb-2 font-heading text-4xl font-bold lg:text-7xl">Hey, I'm Isaiah Stockton</h1>
+					<p class="text-xl text-muted">Making the world a better place, one line at a time.</p>
 				</div>
-				<div class="flex gap-4">
+				<div class="flex justify-center gap-4 lg:justify-start">
 					<Button href="/resume.pdf" target="_blank">View resume</Button>
 					<Button variant="link" disabled>View blog</Button>
 				</div>
 			</div>
-			<div class="flex h-1/4 items-center gap-8 bg-background px-20 py-40">
-				<h2 class="font-heading text-4xl font-semibold">Social links</h2>
+			<div class="flex items-center gap-8 bg-background px-8 py-16 lg:h-1/4 lg:px-20 lg:py-40">
+				<h2 class="font-heading text-2xl font-semibold lg:text-4xl">Social links</h2>
 				<ul class="flex w-full flex-col divide-y divide-muted">
 					<li class="flex items-center justify-between pb-2 pl-2">
-						<p class="text-lg font-semibold">GitHub</p>
+						<p class="font-semibold lg:text-lg">GitHub</p>
 						<Button
 							size="lg"
 							variant="link"
@@ -31,11 +31,11 @@
 						>
 					</li>
 					<li class="flex items-center justify-between py-2 pl-2">
-						<p class="text-lg font-semibold">LinkedIn</p>
+						<p class="font-semibold lg:text-lg">LinkedIn</p>
 						<Button size="lg" variant="link" disabled>Follow</Button>
 					</li>
 					<li class="flex items-center justify-between pl-2 pt-2">
-						<p class="text-lg font-semibold">Twitter/X</p>
+						<p class="font-semibold lg:text-lg">Twitter/X</p>
 						<Button
 							size="lg"
 							variant="link"
@@ -46,7 +46,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="h-full">
+		<div class="h-full sm:hidden lg:block">
 			<img
 				src="/development.jpg"
 				alt="Lines of code"
@@ -54,9 +54,9 @@
 			/>
 		</div>
 	</section>
-	<section class="container px-20 pt-32">
+	<section class="container px-8 pt-16 lg:px-20 lg:pt-32">
 		<h2 class="font-heading text-2xl" id="about">// ABOUT</h2>
-		<div class="mx-auto my-12 flex w-fit gap-4">
+		<div class="mx-auto my-12 flex w-fit flex-col gap-4 lg:flex-row">
 			<Card.Root class="max-w-sm flex-1">
 				<Card.Header>
 					<User size={48} />
@@ -115,9 +115,9 @@
 		<img
 			src="/typing.jpg"
 			alt="A person typing on a laptop keyboard with a phone to the left and a wallet and camera lens to the right"
-			class="w-1/2 rounded-r-3xl object-cover"
+			class="w-1/2 rounded-r-3xl object-cover sm:hidden lg:block"
 		/>
-		<div class="mr-20 flex flex-col gap-16 uppercase">
+		<div class="flex flex-col gap-16 px-8 pb-16 uppercase lg:mr-20">
 			<h2 class="font-heading text-2xl">// my skills</h2>
 			<div class="grid w-fit grid-cols-2 gap-12">
 				<div class="flex items-center gap-4">
