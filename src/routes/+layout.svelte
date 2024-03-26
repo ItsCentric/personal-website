@@ -23,6 +23,4 @@
 	</ul>
 	<Button disabled>View Blog</Button>
 </nav>
-<span class="block bg-gradient-to-br from-[#2f1934] to-background">
-	<slot />
-</span>
+<slot />
