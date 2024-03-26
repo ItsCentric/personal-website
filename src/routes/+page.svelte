@@ -18,7 +18,7 @@
 					<Button variant="link" disabled>View blog</Button>
 				</div>
 			</div>
-			<div class="flex h-1/4 items-center gap-8 bg-black px-20 py-40">
+			<div class="flex h-1/4 items-center gap-8 bg-background px-20 py-40">
 				<h2 class="font-heading text-4xl font-semibold">Social links</h2>
 				<ul class="flex w-full flex-col divide-y divide-muted">
 					<li class="flex items-center justify-between pb-2 pl-2">
