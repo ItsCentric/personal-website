@@ -1,5 +1,8 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
+	import * as Card from '$lib/components/ui/card';
+	import { Separator } from '$lib/components/ui/separator';
+	import { User, Armchair, BriefcaseBusiness, Goal } from 'lucide-svelte';
 </script>
 
 <main>
@@ -50,5 +53,62 @@
 				class="row-span-2 mt-[72px] h-[calc(100vh_-_72px)]"
 			/>
 		</div>
+	</section>
+	<section class="container px-20 pt-32">
+		<h2 class="font-heading text-2xl" id="about">// ABOUT</h2>
+		<div class="mx-auto my-12 flex w-fit gap-4">
+			<Card.Root class="max-w-sm flex-1">
+				<Card.Header>
+					<User size={48} />
+					<Card.Title>Who am I?</Card.Title>
+				</Card.Header>
+				<Card.Content>
+					<p>
+						I'm a software engineer with a passion for creating and building things. I've been
+						coding for over 2 years and have worked on a variety of projects ranging from web
+						development to mobile applications.
+					</p>
+				</Card.Content>
+			</Card.Root>
+			<Card.Root class="max-w-sm flex-1">
+				<Card.Header>
+					<Armchair size={48} />
+					<Card.Title>What do I do?</Card.Title>
+				</Card.Header>
+				<Card.Content>
+					<p>
+						Besides programming, I also enjoy sports and games in my freetime. I take pride in my
+						health and enjoy working out at my local gym to keep myself in tip-top shape.
+					</p>
+				</Card.Content>
+			</Card.Root>
+			<Card.Root class="max-w-sm flex-1">
+				<Card.Header>
+					<BriefcaseBusiness size={48} />
+					<Card.Title>What can I do for you?</Card.Title>
+				</Card.Header>
+				<Card.Content>
+					<p>
+						I can provide my technical expertise to help you build your next project. I have
+						experience with a variety of technologies to build web applications, mobile
+						applications, and more.
+					</p>
+				</Card.Content>
+			</Card.Root>
+			<Card.Root class="max-w-sm flex-1">
+				<Card.Header>
+					<Goal size={48} />
+					<Card.Title>What is my goal?</Card.Title>
+				</Card.Header>
+				<Card.Content>
+					<p>
+						My goal is to help you bring your ideas to life. I want to help you build the next great
+						thing and help make everyone's lives that much better.
+					</p>
+				</Card.Content>
+			</Card.Root>
+		</div>
+		<p class="text-center font-semibold">Transforming second languages to second nature.</p>
+		<Separator class="my-12" />
 	</section>
 </main>
