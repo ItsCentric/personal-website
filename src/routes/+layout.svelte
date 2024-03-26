@@ -3,9 +3,7 @@
 	import '../app.pcss';
 </script>
 
-<nav
-	class="absolute flex w-full items-center justify-between border-b border-b-muted bg-background px-20 py-4"
->
+<nav class="absolute flex w-full items-center justify-between border-b border-b-muted px-20 py-4">
 	<div>
 		<a href="/" class="font-heading text-3xl font-bold">Isaiah.</a>
 	</div>
@@ -25,4 +23,6 @@
 	</ul>
 	<Button disabled>View Blog</Button>
 </nav>
-<slot />
+<span class="block bg-gradient-to-br from-[#2f1934] to-background">
+	<slot />
+</span>

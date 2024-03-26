@@ -1,13 +1,5 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
-	import { Card, CardContent, CardHeader } from '$lib/components/ui/card';
-	import CardDescription from '$lib/components/ui/card/card-description.svelte';
-	import CardTitle from '$lib/components/ui/card/card-title.svelte';
-	import CarouselContent from '$lib/components/ui/carousel/carousel-content.svelte';
-	import CarouselItem from '$lib/components/ui/carousel/carousel-item.svelte';
-	import CarouselNext from '$lib/components/ui/carousel/carousel-next.svelte';
-	import CarouselPrevious from '$lib/components/ui/carousel/carousel-previous.svelte';
-	import Carousel from '$lib/components/ui/carousel/carousel.svelte';
 </script>
 
 <main>
@@ -52,36 +44,11 @@
 			</div>
 		</div>
 		<div class="h-full">
-			<img src="/development.jpg" alt="Lines of code" class="row-span-2 h-full" />
-		</div>
-	</section>
-	<section class="flex bg-slate-200 py-16">
-		<div class="container">
-			<p class="text-sm text-slate-600">Skills</p>
-			<h3 class="text-5xl font-bold">Technical Skills</h3>
-			<p class="text-2xl text-slate-500">
-				I boast extensive experience in multiple skills. Click the arrows to find out more about
-				each one!
-			</p>
-		</div>
-		<div class="container">
-			<Carousel>
-				<CarouselContent>
-					<CarouselItem>
-						<Card>
-							<CardHeader>
-								<CardTitle>JavaScript</CardTitle>
-								<CardDescription>blah blah blah blah</CardDescription>
-							</CardHeader>
-							<CardContent>
-								<p>blah blah blah blah</p>
-							</CardContent>
-						</Card>
-					</CarouselItem>
-				</CarouselContent>
-				<CarouselPrevious />
-				<CarouselNext />
-			</Carousel>
+			<img
+				src="/development.jpg"
+				alt="Lines of code"
+				class="row-span-2 mt-[72px] h-[calc(100vh_-_72px)]"
+			/>
 		</div>
 	</section>
 </main>
