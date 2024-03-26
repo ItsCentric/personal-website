@@ -111,4 +111,83 @@
 		<p class="text-center font-semibold">Transforming second languages to second nature.</p>
 		<Separator class="my-12" />
 	</section>
+	<section id="skills" class="flex items-center gap-32">
+		<img
+			src="/typing.jpg"
+			alt="A person typing on a laptop keyboard with a phone to the left and a wallet and camera lens to the right"
+			class="w-1/2 rounded-r-3xl object-cover"
+		/>
+		<div class="mr-20 flex flex-col gap-16 uppercase">
+			<h2 class="font-heading text-2xl">// my skills</h2>
+			<div class="grid w-fit grid-cols-2 gap-12">
+				<div class="flex items-center gap-4">
+					<img
+						src="/typescript-logo.png"
+						alt="TypeScript logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
+					<p class="text-sm">typescript</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<img src="/go-logo.png" alt="Go logo" class="h-12 w-12 rounded-lg bg-white/95 p-1" />
+					<p class="text-sm">go</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<img
+						src="/react-logo.png"
+						alt="React logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
+					<p class="text-sm">react</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<img
+						src="/svelte-logo.png"
+						alt="Svelte logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
+					<p class="text-sm">svelte</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<img
+						src="/postgresql-logo.png"
+						alt="Postgresql logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
+					<p class="text-sm">postgresql</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<img
+						src="/mysql-logo.png"
+						alt="Mysql logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
+					<p class="text-sm">mysql</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<img
+						src="/python-logo.png"
+						alt="Python logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
+					<p class="text-sm">python</p>
+				</div>
+				<div class="flex items-center gap-4">
+					<img
+						src="/mongodb-logo.png"
+						alt="Mongodb logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
+					<p class="text-sm">mongodb</p>
+				</div>
+			</div>
+			<div>
+				<p class="mb-3 text-sm text-muted">some other ordinary skills</p>
+				<p class="text-xl">microsoft office, github, git, linux, docker</p>
+			</div>
+			<Button href="/resume.pdf" target="_blank" size="lg" variant="outline" class="bg-transparent"
+				>View resume</Button
+			>
+		</div>
+	</section>
 </main>
