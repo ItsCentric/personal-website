@@ -58,7 +58,7 @@
 		<h2 class="font-heading text-2xl" id="about">// ABOUT</h2>
 		<div class="mx-auto my-12 flex w-fit flex-col gap-4 lg:flex-row">
 			<Card.Root class="max-w-sm flex-1">
-				<Card.Header>
+				<Card.Header class="space-y-7">
 					<User size={48} />
 					<Card.Title>Who am I?</Card.Title>
 				</Card.Header>
@@ -71,7 +71,7 @@
 				</Card.Content>
 			</Card.Root>
 			<Card.Root class="max-w-sm flex-1">
-				<Card.Header>
+				<Card.Header class="space-y-7">
 					<Armchair size={48} />
 					<Card.Title>What do I do?</Card.Title>
 				</Card.Header>
@@ -83,7 +83,7 @@
 				</Card.Content>
 			</Card.Root>
 			<Card.Root class="max-w-sm flex-1">
-				<Card.Header>
+				<Card.Header class="space-y-7">
 					<BriefcaseBusiness size={48} />
 					<Card.Title>What can I do for you?</Card.Title>
 				</Card.Header>
@@ -96,7 +96,7 @@
 				</Card.Content>
 			</Card.Root>
 			<Card.Root class="max-w-sm flex-1">
-				<Card.Header>
+				<Card.Header class="space-y-7">
 					<Goal size={48} />
 					<Card.Title>What is my goal?</Card.Title>
 				</Card.Header>
@@ -111,7 +111,7 @@
 		<p class="text-center font-semibold">Transforming second languages to second nature.</p>
 		<Separator class="my-12" />
 	</section>
-	<section id="skills" class="flex items-center gap-32">
+	<section id="skills" class="mb-40 flex items-center gap-32">
 		<img
 			src="/typing.jpg"
 			alt="A person typing on a laptop keyboard with a phone to the left and a wallet and camera lens to the right"
@@ -188,6 +188,116 @@
 			<Button href="/resume.pdf" target="_blank" size="lg" variant="outline" class="bg-transparent"
 				>View resume</Button
 			>
+		</div>
+	</section>
+	<section class="container mb-24">
+		<h2 class="mb-12 text-center font-heading text-2xl uppercase">// projects</h2>
+		<div class="flex justify-center gap-8">
+			<Card.Root class="max-w-sm overflow-hidden border-none">
+				<Card.Header class="px-0 pt-0">
+					<img
+						src="/music-wizard-preview.png"
+						alt="A project preview featuring a dashboard with different music statistics such as top genres and recently played songs"
+						class="mb-4 aspect-video w-full object-cover"
+					/>
+					<Card.Title class="px-6 font-heading">Music Wizard</Card.Title>
+					<Card.Description class="px-6"
+						>A web application that allows users to connect their Spotify account to see their
+						listening habits. Users are able to view Spotify statistics such as recent songs, top
+						artists, top songs, etc. This was the first website I made!</Card.Description
+					>
+				</Card.Header>
+				<Card.Footer class="flex items-center justify-between">
+					<Button href="https://github.com/ItsCentric/music-wizard/tree/main" target="_blank"
+						>View project</Button
+					>
+					<div class="flex items-center gap-2">
+						<img
+							src="/react-logo.png"
+							alt="React logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+						<img
+							src="/typescript-logo.png"
+							alt="Typescript logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+						<img
+							src="/mongodb-logo.png"
+							alt="Mongodb logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+					</div>
+				</Card.Footer>
+			</Card.Root>
+			<Card.Root class="relative max-w-sm overflow-hidden border-none">
+				<Card.Header class="px-0 pt-0">
+					<img
+						src="/lyric-thing-preview.png"
+						alt="A project preview featuring a music player with lyrics"
+						class="mb-4 aspect-video w-full object-cover"
+					/>
+					<Card.Title class="px-6 font-heading">Lyric Thing</Card.Title>
+					<Card.Description class="px-6"
+						>A web application that allows users to connect their Spotify account to see AI
+						transcribed lyrics in real time for their currently playing song.</Card.Description
+					>
+				</Card.Header>
+				<Card.Footer class="absolute bottom-0 flex w-full items-center justify-between">
+					<Button href="https://github.com/ItsCentric/lyric-thing/tree/main" target="_blank"
+						>View project</Button
+					>
+					<div class="flex items-center gap-2">
+						<img
+							src="/svelte-logo.png"
+							alt="Svelte logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+						<img
+							src="/typescript-logo.png"
+							alt="Mongodb logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+						<img
+							src="/pocketbase-logo.png"
+							alt="Pocketbase logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+					</div>
+				</Card.Footer>
+			</Card.Root>
+			<Card.Root class="relative max-w-sm overflow-hidden border-none">
+				<Card.Header class="px-0 pt-0">
+					<img
+						src="/game-chronicle-preview.png"
+						alt="A project preview featuring multiple game covers in a grid"
+						class="mb-4 aspect-video w-full"
+					/>
+					<Card.Title class="px-6 font-heading">Game Chronicle</Card.Title>
+					<Card.Description class="px-6"
+						>A desktop application that allows users to log their game sessions. Has a togglable
+						feature that automatically detects when a game has been played.</Card.Description
+					>
+				</Card.Header>
+				<Card.Footer class="absolute bottom-0 flex w-full items-center justify-between">
+					<Button href="https://github.com/ItsCentric/game-chronicle/tree/main" target="_blank"
+						>View project</Button
+					>
+					<div class="flex items-center gap-2">
+						<img
+							src="/svelte-logo.png"
+							alt="Svelte logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+						<img src="/go-logo.png" alt="Go logo" class="h-8 w-8 rounded-lg bg-white/95 p-1" />
+						<img
+							src="/sqlite-logo.png"
+							alt="SQLite logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+					</div>
+				</Card.Footer>
+			</Card.Root>
 		</div>
 	</section>
 </main>
