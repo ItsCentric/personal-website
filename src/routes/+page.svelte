@@ -46,7 +46,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="h-full sm:hidden lg:block">
+		<div class="hidden h-full lg:block">
 			<img
 				src="/development.jpg"
 				alt="Lines of code"
@@ -115,7 +115,7 @@
 		<img
 			src="/typing.jpg"
 			alt="A person typing on a laptop keyboard with a phone to the left and a wallet and camera lens to the right"
-			class="w-1/2 rounded-r-3xl object-cover sm:hidden lg:block"
+			class="hidden w-1/2 rounded-r-3xl object-cover lg:block"
 		/>
 		<div class="flex flex-col gap-16 px-8 pb-16 uppercase lg:mr-20">
 			<h2 class="font-heading text-2xl">// my skills</h2>
@@ -192,7 +192,7 @@
 	</section>
 	<section class="container mb-24">
 		<h2 class="mb-12 text-center font-heading text-2xl uppercase">// projects</h2>
-		<div class="flex justify-center gap-8">
+		<div class="flex flex-col justify-center gap-8 lg:flex-row">
 			<Card.Root class="max-w-sm overflow-hidden border-none">
 				<Card.Header class="px-0 pt-0">
 					<img
@@ -243,7 +243,7 @@
 						transcribed lyrics in real time for their currently playing song.</Card.Description
 					>
 				</Card.Header>
-				<Card.Footer class="absolute bottom-0 flex w-full items-center justify-between">
+				<Card.Footer class="static bottom-0 flex w-full items-center justify-between lg:absolute">
 					<Button href="https://github.com/ItsCentric/lyric-thing/tree/main" target="_blank"
 						>View project</Button
 					>
@@ -279,7 +279,7 @@
 						feature that automatically detects when a game has been played.</Card.Description
 					>
 				</Card.Header>
-				<Card.Footer class="absolute bottom-0 flex w-full items-center justify-between">
+				<Card.Footer class="static bottom-0 flex w-full items-center justify-between lg:absolute">
 					<Button href="https://github.com/ItsCentric/game-chronicle/tree/main" target="_blank"
 						>View project</Button
 					>
@@ -300,12 +300,14 @@
 			</Card.Root>
 		</div>
 	</section>
-	<footer class="relative flex gap-32 bg-background px-28 py-20">
+	<footer
+		class="relative flex flex-col gap-8 bg-background px-8 py-16 lg:flex-row lg:gap-32 lg:px-28 lg:py-20"
+	>
 		<div class="flex flex-col">
 			<p class="mb-5 font-heading text-2xl">Isaiah</p>
 			<p class="text-muted">Designed and developed by Isaiah Stockton</p>
 		</div>
-		<ul class="flex flex-col gap-4 text-muted">
+		<ul class="mb-8 flex flex-row gap-4 text-muted lg:flex-col">
 			<li>
 				<a href="/" class="transition-colors hover:text-white">Home</a>
 			</li>

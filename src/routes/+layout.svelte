@@ -26,7 +26,7 @@
 			</DropdownMenu.Content>
 		</DropdownMenu.Root>
 	</div>
-	<ul class="items-center gap-8 text-center sm:hidden lg:flex">
+	<ul class="hidden items-center gap-8 text-center lg:flex">
 		<li>
 			<Button variant="link" href="/">Home</Button>
 		</li>
@@ -40,6 +40,6 @@
 			<Button variant="link" href="#projects">Projects</Button>
 		</li>
 	</ul>
-	<Button disabled class="sm:hidden lg:block">View Blog</Button>
+	<Button disabled class="hidden lg:block">View Blog</Button>
 </nav>
 <slot />
