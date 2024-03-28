@@ -11,7 +11,7 @@
 			<div class="flex flex-grow flex-col justify-center px-8 py-16 lg:pl-20">
 				<div class="mb-4 text-center lg:text-left">
 					<h1 class="mb-2 font-heading text-4xl font-bold lg:text-7xl">Hey, I'm Isaiah Stockton</h1>
-					<p class="text-xl text-muted">Making the world a better place, one line at a time.</p>
+					<p class="text-xl text-muted">Your journey to digital excellence starts here.</p>
 				</div>
 				<div class="flex justify-center gap-4 lg:justify-start">
 					<Button href="/resume.pdf" target="_blank">View resume</Button>
@@ -108,7 +108,7 @@
 				</Card.Content>
 			</Card.Root>
 		</div>
-		<p class="text-center font-semibold">Transforming second languages to second nature.</p>
+		<p class="text-center font-semibold">Transforming second languages into second nature.</p>
 		<Separator class="my-12" />
 	</section>
 	<section id="skills" class="mb-40 flex items-center gap-32">
