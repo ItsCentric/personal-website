@@ -5,6 +5,14 @@
 	import { User, Armchair, BriefcaseBusiness, Goal } from 'lucide-svelte';
 </script>
 
+<svelte:head>
+	<title>Isaiah Stockton | Software Engineer</title>
+	<meta
+		name="description"
+		content="Isaiah Stockton is a software engineer with a passion for creating and building things. He has experience with a variety of technologies to build web applications, mobile applications, and more."
+	/>
+</svelte:head>
+
 <main>
 	<section class="grid-cols-[33%,_1fr] pt-[69px] lg:grid lg:h-screen lg:pt-0">
 		<div class="flex h-full flex-col">
