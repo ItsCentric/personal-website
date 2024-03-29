@@ -48,9 +48,9 @@
 		</div>
 		<div class="hidden h-full lg:block">
 			<img
-				src="/development.jpg"
+				src="/images/development.webp"
 				alt="Lines of code"
-				class="row-span-2 mt-[72px] h-[calc(100vh_-_72px)]"
+				class="row-span-2 mt-[72px] h-[calc(100vh_-_72px)] object-cover"
 			/>
 		</div>
 	</section>
@@ -113,7 +113,8 @@
 	</section>
 	<section id="skills" class="mb-40 flex items-center gap-32">
 		<img
-			src="/typing.jpg"
+			src="/images/typing.webp"
+			loading="lazy"
 			alt="A person typing on a laptop keyboard with a phone to the left and a wallet and camera lens to the right"
 			class="hidden w-1/2 rounded-r-3xl object-cover lg:block"
 		/>
@@ -122,19 +123,26 @@
 			<div class="grid w-fit grid-cols-2 gap-12">
 				<div class="flex items-center gap-4">
 					<img
-						src="/typescript-logo.png"
+						src="/images/logos/typescript-logo.webp"
+						loading="lazy"
 						alt="TypeScript logo"
 						class="h-12 w-12 rounded-lg bg-white/95 p-1"
 					/>
 					<p class="text-sm">typescript</p>
 				</div>
 				<div class="flex items-center gap-4">
-					<img src="/go-logo.png" alt="Go logo" class="h-12 w-12 rounded-lg bg-white/95 p-1" />
+					<img
+						src="/images/logos/go-logo.webp"
+						loading="lazy"
+						alt="Go logo"
+						class="h-12 w-12 rounded-lg bg-white/95 p-1"
+					/>
 					<p class="text-sm">go</p>
 				</div>
 				<div class="flex items-center gap-4">
 					<img
-						src="/react-logo.png"
+						src="/images/logos/react-logo.webp"
+						loading="lazy"
 						alt="React logo"
 						class="h-12 w-12 rounded-lg bg-white/95 p-1"
 					/>
@@ -142,7 +150,8 @@
 				</div>
 				<div class="flex items-center gap-4">
 					<img
-						src="/svelte-logo.png"
+						src="/images/logos/svelte-logo.webp"
+						loading="lazy"
 						alt="Svelte logo"
 						class="h-12 w-12 rounded-lg bg-white/95 p-1"
 					/>
@@ -150,7 +159,8 @@
 				</div>
 				<div class="flex items-center gap-4">
 					<img
-						src="/postgresql-logo.png"
+						src="/images/logos/postgresql-logo.webp"
+						loading="lazy"
 						alt="Postgresql logo"
 						class="h-12 w-12 rounded-lg bg-white/95 p-1"
 					/>
@@ -158,7 +168,8 @@
 				</div>
 				<div class="flex items-center gap-4">
 					<img
-						src="/mysql-logo.png"
+						src="/images/logos/mysql-logo.webp"
+						loading="lazy"
 						alt="Mysql logo"
 						class="h-12 w-12 rounded-lg bg-white/95 p-1"
 					/>
@@ -166,7 +177,8 @@
 				</div>
 				<div class="flex items-center gap-4">
 					<img
-						src="/python-logo.png"
+						src="/images/logos/python-logo.webp"
+						loading="lazy"
 						alt="Python logo"
 						class="h-12 w-12 rounded-lg bg-white/95 p-1"
 					/>
@@ -174,7 +186,8 @@
 				</div>
 				<div class="flex items-center gap-4">
 					<img
-						src="/mongodb-logo.png"
+						src="/images/logos/mongodb-logo.webp"
+						loading="lazy"
 						alt="Mongodb logo"
 						class="h-12 w-12 rounded-lg bg-white/95 p-1"
 					/>
@@ -196,7 +209,8 @@
 			<Card.Root class="max-w-sm overflow-hidden border-none">
 				<Card.Header class="px-0 pt-0">
 					<img
-						src="/music-wizard-preview.png"
+						src="/images/music-wizard-preview.webp"
+						loading="lazy"
 						alt="A project preview featuring a dashboard with different music statistics such as top genres and recently played songs"
 						class="mb-4 aspect-video w-full object-cover"
 					/>
@@ -213,17 +227,20 @@
 					>
 					<div class="flex items-center gap-2">
 						<img
-							src="/react-logo.png"
+							src="/images/logos/react-logo.webp"
+							loading="lazy"
 							alt="React logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
 						<img
-							src="/typescript-logo.png"
+							src="/images/logos/typescript-logo.webp"
+							loading="lazy"
 							alt="Typescript logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
 						<img
-							src="/mongodb-logo.png"
+							src="/images/logos/mongodb-logo.webp"
+							loading="lazy"
 							alt="Mongodb logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
@@ -233,7 +250,8 @@
 			<Card.Root class="relative max-w-sm overflow-hidden border-none">
 				<Card.Header class="px-0 pt-0">
 					<img
-						src="/lyric-thing-preview.png"
+						src="/images/lyric-thing-preview.webp"
+						loading="lazy"
 						alt="A project preview featuring a music player with lyrics"
 						class="mb-4 aspect-video w-full object-cover"
 					/>
@@ -249,17 +267,20 @@
 					>
 					<div class="flex items-center gap-2">
 						<img
-							src="/svelte-logo.png"
+							src="/images/logos/svelte-logo.webp"
+							loading="lazy"
 							alt="Svelte logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
 						<img
-							src="/typescript-logo.png"
+							src="/images/logos/typescript-logo.webp"
+							loading="lazy"
 							alt="Mongodb logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
 						<img
-							src="/pocketbase-logo.png"
+							src="/images/logos/pocketbase-logo.webp"
+							loading="lazy"
 							alt="Pocketbase logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
@@ -269,7 +290,8 @@
 			<Card.Root class="relative max-w-sm overflow-hidden border-none">
 				<Card.Header class="px-0 pt-0">
 					<img
-						src="/game-chronicle-preview.png"
+						src="/images/game-chronicle-preview.webp"
+						loading="lazy"
 						alt="A project preview featuring multiple game covers in a grid"
 						class="mb-4 aspect-video w-full"
 					/>
@@ -285,13 +307,20 @@
 					>
 					<div class="flex items-center gap-2">
 						<img
-							src="/svelte-logo.png"
+							src="/images/logos/svelte-logo.webp"
+							loading="lazy"
 							alt="Svelte logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
-						<img src="/go-logo.png" alt="Go logo" class="h-8 w-8 rounded-lg bg-white/95 p-1" />
 						<img
-							src="/sqlite-logo.png"
+							src="/images/logos/go-logo.webp"
+							loading="lazy"
+							alt="Go logo"
+							class="h-8 w-8 rounded-lg bg-white/95 p-1"
+						/>
+						<img
+							src="/images/logos/sqlite-logo.webp"
+							loading="lazy"
 							alt="SQLite logo"
 							class="h-8 w-8 rounded-lg bg-white/95 p-1"
 						/>
