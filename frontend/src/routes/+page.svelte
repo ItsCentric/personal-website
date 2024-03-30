@@ -23,7 +23,7 @@
 				</div>
 				<div class="flex justify-center gap-4 lg:justify-start">
 					<Button href="/resume.pdf" target="_blank">View resume</Button>
-					<Button variant="link" disabled>View blog</Button>
+					<Button variant="link" href='/blog'>View blog</Button>
 				</div>
 			</div>
 			<div class="flex items-center gap-8 bg-background px-8 py-16 lg:h-1/4 lg:px-20 lg:py-40">
@@ -337,29 +337,4 @@
 			</Card.Root>
 		</div>
 	</section>
-	<footer
-		class="relative flex flex-col gap-8 bg-background px-8 py-16 lg:flex-row lg:gap-32 lg:px-28 lg:py-20"
-	>
-		<div class="flex flex-col">
-			<p class="mb-5 font-heading text-2xl">Isaiah</p>
-			<p class="text-muted">Designed and developed by Isaiah Stockton</p>
-		</div>
-		<ul class="mb-8 flex flex-row gap-4 text-muted lg:flex-col">
-			<li>
-				<a href="/" class="transition-colors hover:text-white">Home</a>
-			</li>
-			<li>
-				<a href="#about" class="transition-colors hover:text-white">About</a>
-			</li>
-			<li>
-				<a href="#skills" class="transition-colors hover:text-white">Skills</a>
-			</li>
-			<li>
-				<a href="#projects" class="transition-colors hover:text-white">Projects</a>
-			</li>
-		</ul>
-		<p class="absolute bottom-2 left-1/2 -translate-x-1/2 text-muted">
-			© 2024 Isaiah Stockton. All rights reserved
-		</p>
-	</footer>
 </main>
