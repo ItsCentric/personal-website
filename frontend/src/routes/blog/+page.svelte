@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { HeartCrack } from 'lucide-svelte';
 	import type { PageData } from './$types';
+	import { PUBLIC_STRAPI_URL } from '$env/static/public';
 
 	export let data: PageData;
 </script>
@@ -15,7 +16,7 @@
 >
 	{#if data.posts.data.length === 0}
 		<div class="text-center">
-            <HeartCrack size={64} class='mx-auto mb-4' />
+			<HeartCrack size={64} class="mx-auto mb-4" />
 			<h1 class="mb-4 font-heading text-4xl font-bold">No blog posts... yet</h1>
 			<p class="text-muted">
 				Check back later for the latest and greatest works of literature you've <span
@@ -34,7 +35,7 @@
 				>
 					{#if postData.thumbnail}
 						<img
-							src={`http://localhost:1337${postData.thumbnail.data.attributes.url}`}
+							src={`${PUBLIC_STRAPI_URL}${postData.thumbnail.data.attributes.url}`}
 							alt={postData.title}
 							class="row-span-2 h-48 w-full rounded-lg object-cover object-center"
 						/>
