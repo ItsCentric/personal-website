@@ -3,6 +3,8 @@
 	import type { PageData } from './$types';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	import { PUBLIC_STRAPI_URL } from '$env/static/public';
+	import Button from '$lib/components/ui/button/button.svelte';
+	import { ArrowLeft } from 'lucide-svelte';
 
 	export let data: PageData;
 </script>
@@ -12,8 +14,11 @@
 	<meta name="description" content={data.post.description} />
 </svelte:head>
 
-<main class=" mx-auto min-h-screen max-w-prose pt-[72px]">
+<main class="mx-auto min-h-screen max-w-prose pt-[72px]">
 	<div class="relative mt-16">
+		<div class="absolute -translate-x-full -left-8 top-0">
+			<Button href="/blog" variant="ghost" size="icon"><ArrowLeft size={48} /></Button>
+		</div>
 		<img
 			src={`${PUBLIC_STRAPI_URL}${data.post.thumbnail.data.attributes.url}`}
 			alt={data.post.title}
