@@ -40,14 +40,14 @@
 					</li>
 					<li class="flex items-center justify-between py-2 pl-2">
 						<p class="font-semibold lg:text-lg">LinkedIn</p>
-						<Button size="lg" variant="link" disabled>Follow</Button>
+						<Button size="lg" variant="link" href='https://www.linkedin.com/in/isaiahstockton'>Follow</Button>
 					</li>
 					<li class="flex items-center justify-between pl-2 pt-2">
 						<p class="font-semibold lg:text-lg">Twitter/X</p>
 						<Button
 							size="lg"
 							variant="link"
-							href="https://www.twitter.com/theonlycentric"
+							href="https://www.twitter.com/centriccdev"
 							target="_blank">Follow</Button
 						>
 					</li>
