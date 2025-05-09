@@ -3,6 +3,29 @@
 	import * as Card from '$lib/components/ui/card';
 	import { Separator } from '$lib/components/ui/separator';
 	import { User, Armchair, BriefcaseBusiness, Goal, Construction, Disc3 } from 'lucide-svelte';
+	import { onMount } from 'svelte';
+	import type { CurrentSong } from '$lib';
+
+	let currentSong: CurrentSong | null;
+
+	onMount(() => {
+		async function getCurrentSong() {
+			const res = await fetch('/api/now-playing');
+			if (!res.ok) {
+				throw new Error('Failed to fetch current song');
+			}
+			if (res.status === 204) {
+				currentSong = null;
+				return;
+			}
+			const data = await res.json();
+			currentSong = { ...data };
+		}
+		getCurrentSong();
+		const id = setInterval(getCurrentSong, 10000);
+
+		return () => clearInterval(id);
+	});
 </script>
 
 <svelte:head>
@@ -60,13 +83,26 @@
 				</div>
 				<Separator class="lg:hidden" />
 				<Separator orientation="vertical" class="hidden h-1/2 lg:block" />
-				<div class="flex items-center gap-8">
-					<h2 class="max-w-min font-heading text-2xl font-semibold lg:text-4xl">
-						Work in Progress...
-					</h2>
-					<div class="flex min-w-0 items-center gap-4 rounded-lg bg-white/20 px-4 py-2 shadow-lg">
-						<Construction size={32} class="flex-shrink-0" />
-						<p class="min-w-0 break-words font-semibold">Under const&shy;ruction!</p>
+				<div class="flex flex-1 items-center gap-8">
+					<h2 class="max-w-min font-heading text-2xl font-semibold lg:text-4xl">Listening to...</h2>
+					<div class="flex flex-1 items-center gap-4 rounded-lg bg-white/20 px-4 py-2 shadow-lg">
+						{#if currentSong}
+							<img
+								src={currentSong.cover}
+								alt={currentSong.name}
+								class="aspect-square h-16 min-w-fit rounded-md"
+							/>
+							<div>
+								<p class="line-clamp-2 text-lg font-semibold">{currentSong.name}</p>
+								<p class="line-clamp-1 text-muted">{currentSong.artists.join(', ')}</p>
+							</div>
+						{:else}
+							<Disc3 size={64} class="min-w-fit" />
+							<div>
+								<p class="font-semibold">Nothing :(</p>
+								<p class="text-muted">Yet... stay tuned</p>
+							</div>
+						{/if}
 					</div>
 				</div>
 				<Separator class="lg:hidden" />
