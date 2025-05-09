@@ -6,12 +6,14 @@
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
 	import posthog from 'posthog-js';
+    import { PUBLIC_POSTHOG_KEY, PUBLIC_POSTHOG_API_HOST } from '$env/static/public';
 
 	onMount(() => {
 		if (browser) {
-			posthog.init('phc_DidAu4Hto80aHCBwtu4pMiema1TdEsEi3rvWGMwQIF8', {
-				api_host: 'https://us.i.posthog.com',
-				person_profiles: 'always'
+			posthog.init(PUBLIC_POSTHOG_KEY, {
+				api_host: PUBLIC_POSTHOG_API_HOST,
+				ui_host: 'https://us.posthog.com',
+				person_profiles: 'always',
 			});
 		}
 	});
