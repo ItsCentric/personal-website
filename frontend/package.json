@@ -47,6 +47,8 @@
     "embla-carousel-svelte": "^8.0.0-rc19",
     "lucide-svelte": "^0.363.0",
     "marked": "^12.0.1",
+    "posthog-js": "^1.240.5",
+    "posthog-node": "^4.17.1",
     "tailwind-merge": "^2.2.0",
     "tailwind-variants": "^0.1.20"
   }

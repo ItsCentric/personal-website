@@ -3,6 +3,18 @@
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import { Menu } from 'lucide-svelte';
 	import '../app.pcss';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import posthog from 'posthog-js';
+
+	onMount(() => {
+		if (browser) {
+			posthog.init('phc_DidAu4Hto80aHCBwtu4pMiema1TdEsEi3rvWGMwQIF8', {
+				api_host: 'https://us.i.posthog.com',
+				person_profiles: 'always'
+			});
+		}
+	});
 </script>
 
 <nav
