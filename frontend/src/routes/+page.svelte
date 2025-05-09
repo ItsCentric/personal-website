@@ -2,7 +2,7 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card';
 	import { Separator } from '$lib/components/ui/separator';
-	import { User, Armchair, BriefcaseBusiness, Goal } from 'lucide-svelte';
+	import { User, Armchair, BriefcaseBusiness, Goal, Construction, Disc3 } from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -14,52 +14,73 @@
 </svelte:head>
 
 <main>
-	<section class="grid-cols-[33%,_1fr] pt-[69px] lg:grid lg:h-screen lg:pt-0">
+	<section class="pt-[69px] lg:h-screen lg:pt-0">
 		<div class="flex h-full flex-col">
-			<div class="flex flex-grow flex-col justify-center px-8 py-16 lg:pl-20">
-				<div class="mb-4 text-center lg:text-left">
+			<div class="flex flex-grow flex-col justify-center self-center px-8 py-16 lg:pl-20">
+				<div class="mb-4 text-center">
 					<h1 class="mb-2 font-heading text-4xl font-bold lg:text-7xl">Hey, I'm Isaiah Stockton</h1>
 					<p class="text-xl text-muted">Your journey to digital excellence starts here.</p>
 				</div>
-				<div class="flex justify-center gap-4 lg:justify-start">
+				<div class="flex justify-center gap-4">
 					<Button href="/resume.pdf" target="_blank">View resume</Button>
-					<Button variant="link" href='/blog'>View blog</Button>
+					<Button variant="link" href="/blog">View blog</Button>
 				</div>
 			</div>
-			<div class="flex items-center gap-8 bg-background px-8 py-16 lg:h-1/4 lg:px-20 lg:py-40">
-				<h2 class="font-heading text-2xl font-semibold lg:text-4xl">Social links</h2>
-				<ul class="flex w-full flex-col divide-y divide-muted">
-					<li class="flex items-center justify-between pb-2 pl-2">
-						<p class="font-semibold lg:text-lg">GitHub</p>
-						<Button
-							size="lg"
-							variant="link"
-							href="https://www.github.com/itscentric"
-							target="_blank">Follow</Button
-						>
-					</li>
-					<li class="flex items-center justify-between py-2 pl-2">
-						<p class="font-semibold lg:text-lg">LinkedIn</p>
-						<Button size="lg" variant="link" href='https://www.linkedin.com/in/isaiahstockton'>Follow</Button>
-					</li>
-					<li class="flex items-center justify-between pl-2 pt-2">
-						<p class="font-semibold lg:text-lg">Twitter/X</p>
-						<Button
-							size="lg"
-							variant="link"
-							href="https://www.twitter.com/centriccdev"
-							target="_blank">Follow</Button
-						>
-					</li>
-				</ul>
+			<div
+				class="flex flex-col gap-8 bg-background px-8 py-12 lg:h-1/4 lg:flex-row lg:items-center lg:justify-around lg:px-28"
+			>
+				<div class="flex items-center gap-8">
+					<h2 class="font-heading text-2xl font-semibold lg:text-4xl">Social links</h2>
+					<ul class="flex w-full flex-col divide-y divide-muted">
+						<li class="flex items-center justify-between pb-2 pl-2">
+							<p class="font-semibold lg:text-lg">GitHub</p>
+							<Button
+								size="lg"
+								variant="link"
+								href="https://www.github.com/itscentric"
+								target="_blank">Follow</Button
+							>
+						</li>
+						<li class="flex items-center justify-between py-2 pl-2">
+							<p class="font-semibold lg:text-lg">LinkedIn</p>
+							<Button size="lg" variant="link" href="https://www.linkedin.com/in/isaiahstockton"
+								>Follow</Button
+							>
+						</li>
+						<li class="flex items-center justify-between pl-2 pt-2">
+							<p class="font-semibold lg:text-lg">Twitter/X</p>
+							<Button
+								size="lg"
+								variant="link"
+								href="https://www.twitter.com/centriccdev"
+								target="_blank">Follow</Button
+							>
+						</li>
+					</ul>
+				</div>
+				<Separator class="lg:hidden" />
+				<Separator orientation="vertical" class="hidden h-1/2 lg:block" />
+				<div class="flex items-center gap-8">
+					<h2 class="max-w-min font-heading text-2xl font-semibold lg:text-4xl">
+						Work in Progress...
+					</h2>
+					<div class="flex min-w-0 items-center gap-4 rounded-lg bg-white/20 px-4 py-2 shadow-lg">
+						<Construction size={32} class="flex-shrink-0" />
+						<p class="min-w-0 break-words font-semibold">Under const&shy;ruction!</p>
+					</div>
+				</div>
+				<Separator class="lg:hidden" />
+				<Separator orientation="vertical" class="hidden h-1/2 lg:block" />
+				<div class="flex items-center gap-8">
+					<h2 class="max-w-min font-heading text-2xl font-semibold lg:text-4xl">
+						Work in Progress...
+					</h2>
+					<div class="flex min-w-0 items-center gap-4 rounded-lg bg-white/20 px-4 py-2 shadow-lg">
+						<Construction size={32} class="flex-shrink-0" />
+						<p class="min-w-0 break-words font-semibold">Under const&shy;ruction!</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="hidden h-full lg:block">
-			<img
-				src="/images/development.webp"
-				alt="Lines of code"
-				class="row-span-2 mt-[72px] h-[calc(100vh_-_72px)] object-cover"
-			/>
 		</div>
 	</section>
 	<section class="container px-8 pt-16 lg:px-20 lg:pt-32">
