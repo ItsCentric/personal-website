@@ -239,7 +239,7 @@
 					<p class="mb-4 text-muted">
 						{currentProject.description}
 					</p>
-					<div class="flex gap-2">
+					<div class="flex gap-2 flex-wrap">
 						{#each currentProject.technologies.split(',') as technology}
 							<Badge>{technology}</Badge>
 						{/each}
