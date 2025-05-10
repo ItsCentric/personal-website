@@ -2,11 +2,27 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 	import * as Card from '$lib/components/ui/card';
 	import { Separator } from '$lib/components/ui/separator';
-	import { User, Armchair, BriefcaseBusiness, Goal, Construction, Disc3 } from 'lucide-svelte';
+	import {
+		User,
+		Armchair,
+		BriefcaseBusiness,
+		Goal,
+		Construction,
+		Disc3,
+		ExternalLink
+	} from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import type { CurrentSong } from '$lib';
+	import type { PageData } from './$types';
+	import { PUBLIC_STRAPI_URL } from '$env/static/public';
+	import { Badge } from '$lib/components/ui/badge';
+	import GithubIcon from '$lib/components/github-icon.svelte';
+	import { fly } from 'svelte/transition';
 
+	export let data: PageData;
 	let currentSong: CurrentSong | null;
+	let currentProjectIndex = 0;
+	$: currentProject = data.projects.data[currentProjectIndex].attributes;
 
 	onMount(() => {
 		async function getCurrentSong() {
@@ -83,7 +99,7 @@
 				</div>
 				<Separator class="lg:hidden" />
 				<Separator orientation="vertical" class="hidden h-1/2 lg:block" />
-				<div class="flex flex-1 items-center max-w-lg gap-8">
+				<div class="flex max-w-lg flex-1 items-center gap-8">
 					<h2 class="max-w-min font-heading text-2xl font-semibold lg:text-4xl">Listening to...</h2>
 					<div class="flex flex-1 items-center gap-4 rounded-lg bg-white/20 px-4 py-2 shadow-lg">
 						{#if currentSong}
@@ -130,8 +146,8 @@
 				<Card.Content>
 					<p>
 						I'm a software engineer with a passion for creating and building things. I've been
-						coding for over {(new Date()).getFullYear() - 2021} years and have worked on a variety of projects ranging from web
-						development to mobile applications.
+						coding for over {new Date().getFullYear() - 2021} years and have worked on a variety of projects
+						ranging from web development to mobile applications.
 					</p>
 				</Card.Content>
 			</Card.Root>
@@ -177,129 +193,59 @@
 		<Separator class="my-12" />
 	</section>
 	<section class="container mb-24">
-		<h2 class="mb-12 text-center font-heading text-2xl uppercase">// projects</h2>
-		<div class="flex flex-col justify-center gap-8 lg:flex-row">
-			<Card.Root class="max-w-sm overflow-hidden border-none">
-				<Card.Header class="px-0 pt-0">
+		<h2 class="mb-12 text-center font-heading text-2xl uppercase">// featured projects</h2>
+		<div class="flex flex-col gap-8 lg:flex-row lg:gap-64">
+			<div class="flex flex-col justify-center gap-6 lg:max-w-[15%] lg:flex-1">
+				{#each data.projects.data as project, i}
+					{@const projectData = project.attributes}
+					<button on:click={() => (currentProjectIndex = i)} class="group flex gap-4">
+						<div
+							class={'w-full max-w-0.5 flex-none bg-white transition-all duration-100 group-hover:max-w-1' +
+								(currentProjectIndex === i ? ' max-w-1' : '')}
+						></div>
+						<div class='text-left'>
+                            <p class='text-muted text-sm'>{projectData.type}</p>
+							<p class="text-left text-xl font-semibold">{projectData.name}</p>
+						</div>
+					</button>
+				{/each}
+			</div>
+			{#key currentProjectIndex}
+				<div in:fly={{ y: 40, duration: 400 }} class='lg:flex-1'>
 					<img
-						src="/images/music-wizard-preview.webp"
-						loading="lazy"
-						alt="A project preview featuring a dashboard with different music statistics such as top genres and recently played songs"
-						class="mb-4 aspect-video w-full object-cover"
+						src={PUBLIC_STRAPI_URL + currentProject.showcase.data[0].attributes.url}
+						alt={currentProject.name}
+						class="mb-8 aspect-video w-full rounded-lg shadow-lg"
 					/>
-					<Card.Title class="px-6 font-heading">Music Wizard</Card.Title>
-					<Card.Description class="px-6"
-						>A web application that allows users to connect their Spotify account to see their
-						listening habits. Users are able to view Spotify statistics such as recent songs, top
-						artists, top songs, etc. This was the first website I made!</Card.Description
-					>
-				</Card.Header>
-				<Card.Footer class="flex items-center justify-between">
-					<Button href="https://github.com/ItsCentric/music-wizard/tree/main" target="_blank"
-						>View project</Button
-					>
-					<div class="flex items-center gap-2">
-						<img
-							src="/images/logos/react-logo.webp"
-							loading="lazy"
-							alt="React logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
-						<img
-							src="/images/logos/typescript-logo.webp"
-							loading="lazy"
-							alt="Typescript logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
-						<img
-							src="/images/logos/mongodb-logo.webp"
-							loading="lazy"
-							alt="Mongodb logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
+					<div class="mb-4 flex flex-col justify-between gap-2 lg:flex-row lg:items-center">
+						<p class="font-heading text-3xl font-bold">{currentProject.name}</p>
+						<div class="flex gap-2">
+							<Button href={currentProject.websiteUrl} target="_blank">
+								<p class="mr-1">Visit</p>
+								<ExternalLink size={16} />
+							</Button>
+							<Button
+								variant="outline"
+								target="_blank"
+								class="bg-[#181717] text-foreground hover:bg-black/75 hover:text-foreground"
+								href={currentProject.githubUrl}
+							>
+								<GithubIcon class="mr-1" />
+								<p class="mr-1">Github</p>
+								<ExternalLink size={16} />
+							</Button>
+						</div>
 					</div>
-				</Card.Footer>
-			</Card.Root>
-			<Card.Root class="relative max-w-sm overflow-hidden border-none">
-				<Card.Header class="px-0 pt-0">
-					<img
-						src="/images/lyric-thing-preview.webp"
-						loading="lazy"
-						alt="A project preview featuring a music player with lyrics"
-						class="mb-4 aspect-video w-full object-cover"
-					/>
-					<Card.Title class="px-6 font-heading">Lyric Thing</Card.Title>
-					<Card.Description class="px-6"
-						>A web application that allows users to connect their Spotify account to see AI
-						transcribed lyrics in real time for their currently playing song.</Card.Description
-					>
-				</Card.Header>
-				<Card.Footer class="static bottom-0 flex w-full items-center justify-between lg:absolute">
-					<Button href="https://github.com/ItsCentric/lyric-thing/tree/main" target="_blank"
-						>View project</Button
-					>
-					<div class="flex items-center gap-2">
-						<img
-							src="/images/logos/svelte-logo.webp"
-							loading="lazy"
-							alt="Svelte logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
-						<img
-							src="/images/logos/typescript-logo.webp"
-							loading="lazy"
-							alt="Mongodb logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
-						<img
-							src="/images/logos/pocketbase-logo.webp"
-							loading="lazy"
-							alt="Pocketbase logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
+					<p class="mb-4 text-muted">
+						{currentProject.description}
+					</p>
+					<div class="flex gap-2">
+						{#each currentProject.technologies.split(',') as technology}
+							<Badge>{technology}</Badge>
+						{/each}
 					</div>
-				</Card.Footer>
-			</Card.Root>
-			<Card.Root class="relative max-w-sm overflow-hidden border-none">
-				<Card.Header class="px-0 pt-0">
-					<img
-						src="/images/game-chronicle-preview.webp"
-						loading="lazy"
-						alt="A project preview featuring multiple game covers in a grid"
-						class="mb-4 aspect-video w-full"
-					/>
-					<Card.Title class="px-6 font-heading">Game Chronicle</Card.Title>
-					<Card.Description class="px-6"
-						>A desktop application that allows users to log their game sessions. Has a togglable
-						feature that automatically detects when a game has been played.</Card.Description
-					>
-				</Card.Header>
-				<Card.Footer class="static bottom-0 flex w-full items-center justify-between lg:absolute">
-					<Button href="https://github.com/ItsCentric/game-chronicle/tree/main" target="_blank"
-						>View project</Button
-					>
-					<div class="flex items-center gap-2">
-						<img
-							src="/images/logos/svelte-logo.webp"
-							loading="lazy"
-							alt="Svelte logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
-						<img
-							src="/images/logos/go-logo.webp"
-							loading="lazy"
-							alt="Go logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
-						<img
-							src="/images/logos/sqlite-logo.webp"
-							loading="lazy"
-							alt="SQLite logo"
-							class="h-8 w-8 rounded-lg bg-white/95 p-1"
-						/>
-					</div>
-				</Card.Footer>
-			</Card.Root>
+				</div>
+			{/key}
 		</div>
 	</section>
 </main>
