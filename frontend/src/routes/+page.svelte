@@ -130,7 +130,7 @@
 				<Card.Content>
 					<p>
 						I'm a software engineer with a passion for creating and building things. I've been
-						coding for over 2 years and have worked on a variety of projects ranging from web
+						coding for over {(new Date()).getFullYear() - 2021} years and have worked on a variety of projects ranging from web
 						development to mobile applications.
 					</p>
 				</Card.Content>

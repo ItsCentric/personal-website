@@ -79,6 +79,6 @@
 		</li>
 	</ul>
 	<p class="absolute bottom-2 left-1/2 -translate-x-1/2 text-muted">
-		© 2024 Isaiah Stockton. All rights reserved
+		© {(new Date()).getFullYear()} Isaiah Stockton. All rights reserved
 	</p>
 </footer>
