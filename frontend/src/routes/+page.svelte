@@ -48,7 +48,7 @@
 	<title>Isaiah Stockton | Software Engineer</title>
 	<meta
 		name="description"
-		content="Isaiah Stockton is a software engineer with a passion for creating and building things. He has experience with a variety of technologies to build web applications, mobile applications, and more."
+		content="Isaiah's virtual home. A software engineer with a passion for creating and building things."
 	/>
 </svelte:head>
 

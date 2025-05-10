@@ -8,7 +8,7 @@
 
 <svelte:head>
 	<title>Isaiah Stockton | Blog</title>
-	<meta name="description" content="Isaiah Stockton's blog posts" />
+	<meta name="description" content="Isaiah's blog posts" />
 </svelte:head>
 
 <main
