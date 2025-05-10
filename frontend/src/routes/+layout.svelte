@@ -20,7 +20,7 @@
 </script>
 
 <nav
-	class="absolute flex w-full items-center justify-between border-b border-b-muted px-8 py-4 lg:px-20"
+	class="fixed top-0 bg-background flex w-full items-center justify-between shadow-lg px-8 py-4 lg:px-20"
 >
 	<div>
 		<a href="/" class="font-heading text-3xl font-bold">Isaiah.</a>
